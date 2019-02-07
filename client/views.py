@@ -49,7 +49,7 @@ def common_signup(request, ctx, group):
 
         user = User.objects.create_user(username, email, password)
         target_group = Group.objects.get(name=group)
-        user.add(target_group)
+        user.groups.add(target_group)
 
          # Article.objects.create(title="", content="")
     return render(request, "signup.html", ctx)
