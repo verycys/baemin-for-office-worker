@@ -64,7 +64,7 @@ def common_signup(request, ctx, group):
         if group == "client":
             Client.objects.create(user=user, name=username)
 
-         # Article.objects.create(title="", content="")
+        # Article.objects.create(title="", content="")
     return render(request, "signup.html", ctx)
 
 def signup(request):
@@ -98,7 +98,7 @@ def order(request, partner_id):
                 item = OrderItem.objects.create(
                     order=order,
                     menu=menu,
-                    count=menu_count,
+                    count=menu_count
                 )
                 # order.items.add(item)
 
